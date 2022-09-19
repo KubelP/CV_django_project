@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="about_me">
+        <h2 class = "about_me_h2">About me</h2>
+        <p class='date'>{{amc.date}}</p>
+        <p class='date'>{{amc.body|linebreaksbr}}</p>
+    </div>
+
+    <div class = "commments_form">
+        <form method = 'POST'>
+            {{ comment_form.as_p }}
+            {% csrf_token %}
+            <div class ='submit'><input type="submit" class='' value="Add comment"></div>
+        </form>
+    </div>
+    
+    <div class="comments">
+        <p style="margin-bottom:10px">Comments:</p>
+        {% if comments %}
+            {% for comment in comments %}
+            <p class = 'date_author'>{{ comment.publication_date }} added by {{ comment.author }}</p>
+            <p class = 'comment_body'>{{ comment.comment_body }}</p>
+            {% endfor %}
+        {% else %}
+            <p>No comments yet. Be first!</p>
+        {% endif %}
+    </div>    
+    
+
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Portfolio JP</title>
+    <!-- <script src="{% static 'script.js' %}"></script> -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon_32x32.png' %}"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon_16x16.png' %}"/>
+    <link rel="stylesheet" href="{% static 'style.css' %}"/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <nav class="">
+                <ul id='nav_a' class="nav_a">
+                    {% url 'jpportfolio:about_me' as url %}
+                        <li class=""><a class='btn {% if request.path == url %}active{% endif %}' href="{% url 'jpportfolio:about_me' %}">About me</a></li>
+                    {% url 'jpportfolio:cv' as url %}
+                        <li class=""><a class='btn {% if request.path == url %}active{% endif %}' href="{% url 'jpportfolio:cv' %}">Curriculum Vitae</a></li>
+                    {% url 'jpportfolio:portfolio' as url %}
+                        <li class=""><a class='btn {% if request.path == url %}active{% endif %}' href="{% url 'jpportfolio:portfolio' %}">My portfolio</a></li>
+                    {% url 'jpportfolio:contact' as url %}
+                        <li class=""><a class='btn {% if request.path == url %}active{% endif %}' href="{% url 'jpportfolio:contact' %}">Contact</a></li>
+                </ul>
+        </nav>
+    
+    </div>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+<footer><p>Jakub Piergies 2022 powerdy by</p><p style="margin-top: 10px;"><a class='django_link' href='https://www.djangoproject.com/' target="blank"><img src="{% static 'images/logo-django.svg' %}"></a></p></footer>
+</html>

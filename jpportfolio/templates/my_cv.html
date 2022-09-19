@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    
+
+<div class='cv'>
+    {% for cv in cvs %}
+    <div class="row_one">
+        <h2 class='cv'>P R O F I L E</h2>
+        <p class="">{{ cv.profile|linebreaksbr }}</p>
+        <h2 class='cv'>S K I L L S</h2>
+        <p class="">{{ cv.skills|linebreaksbr }}</p>
+        <h2 class='cv'>N I C E  T O  H A V E</h2>
+        <p class="">{{ cv.other|linebreaksbr }}</p>
+    </div>
+    
+    <div class="row_two">
+        <h2 class='cv'>E X P E R I E N C E</h2>
+        <p class="">{{ cv.experience|linebreaksbr }}</p>
+        <h2 class='cv'>E D U C A T I O N</h2>
+        <p class="">{{ cv.education|linebreaksbr }}</p>
+        <h2 class='cv'>H O B B Y</h2>
+        <p class="">{{ cv.hobby|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
+    
+</div>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static%}
+
+{% block content %}
+
+    
+
+<div class='container'>
+
+    <div class = 'contact'>
+        <div class = 'my_image'><img src='{{ me.my_image.url }}'></div>
+        <div>
+            <div class="logos">
+                <div class = 'logo_mail'><a href='mailto:{{ me.e_mail }}'><img src= "{% static 'images/mail.png' %}"></a></div>
+                <div class="logo_linked"><a href='{{ me.linked_link }}'><img src= "{% static 'images/linkedin-logo.png' %}"></a></div>
+                <div class="logo_git"><a href='{{ me.git_link }}'><img src= "{% static 'images/github-logoc.png' %}"></a></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class = "contact_form">
+        <form method = 'POST'>
+            {{ contact_form.as_p }}
+            {% csrf_token %}
+        <div class="submit"><input type="submit" class='' value="Send"></div>
+        </form>
+    </div>
+    
+   
+    
+</div>
+
+{% endblock %}

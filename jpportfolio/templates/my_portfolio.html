@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    
+
+<div class='my_portfolio'>
+
+    {% for project in projects %}
+    <h2 class="proj_title">{{ project.proj_name }} </h2>
+    <p class="date_author">Added {{ project.publication_date }}</p>
+    <div class="image"><a href='{{ project.link }}'><img src='{{ project.image.url }}'></a></div>
+    <div class="date">{{ project.project_body }}</div>
+    <p class="git_link"><a href="{{ project.git_link }}">For detailed code click me!</a></p>
+    {% endfor %}
+    
+</div>
+
+{% endblock %}
