@@ -1,9 +1,9 @@
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import CreateView, ListView, DetailView
-from jpportfolio.models import MyContact, PortfolioCV, Comments, Portfolio, CV
+from django.views.generic import ListView
+from jpportfolio.models import MyContact, PortfolioCV, Comments, Portfolio
 from jpportfolio.forms import CommentsForm, ContactForm
 from django.http import HttpResponseRedirect
-from django.urls import reverse, reverse_lazy
+from django.urls import reverse
 
 
 def about_me(request):
@@ -46,9 +46,3 @@ class PortfolioView(ListView):
     template_name = 'my_portfolio.html'
     model = Portfolio
     context_object_name = 'projects'
-
-
-class CV(ListView):
-    template_name = 'my_cv.html'
-    model = CV
-    context_object_name = 'cvs'

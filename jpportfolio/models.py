@@ -44,15 +44,3 @@ class MyContact(models.Model):
 
     def __str__(self) -> str:
         return self.name
-
-class CV(models.Model):
-    name = models.CharField(max_length=100)
-    profile = models.TextField()
-    skills = models.TextField()
-    experience = models.TextField()
-    education = models.TextField()
-    hobby = models.TextField()
-    other = models.TextField()
-
-    def __str__(self) -> str:
-        return self.name

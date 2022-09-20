@@ -5,26 +5,79 @@
     
 
 <div class='cv'>
-    {% for cv in cvs %}
-    <div class="row_one">
-        <h2 class='cv'>P R O F I L E</h2>
-        <p class="">{{ cv.profile|linebreaksbr }}</p>
-        <h2 class='cv'>S K I L L S</h2>
-        <p class="">{{ cv.skills|linebreaksbr }}</p>
-        <h2 class='cv'>N I C E  T O  H A V E</h2>
-        <p class="">{{ cv.other|linebreaksbr }}</p>
-    </div>
-    
-    <div class="row_two">
-        <h2 class='cv'>E X P E R I E N C E</h2>
-        <p class="">{{ cv.experience|linebreaksbr }}</p>
-        <h2 class='cv'>E D U C A T I O N</h2>
-        <p class="">{{ cv.education|linebreaksbr }}</p>
-        <h2 class='cv'>H O B B Y</h2>
-        <p class="">{{ cv.hobby|linebreaksbr }}</p>
-    </div>
-    {% endfor %}
-    
+
+
+        
+        <div class="profile">
+            <h2 class='cv'>PROFILE</h2>
+            <p class="">An engineering and technical specialist working in an 
+                accredited research laboratory. My main competence are: 
+                technical, analytical and process thinking, 
+                solving analytical and technical problems, 
+                systematic and organized work, cooperation with foreign entities.</p>
+        </div>
+        
+        <div class="skills">
+            <h2 class='cv'>SKILLS</h2>
+            <p class=""><b>Python</b> – intermediate level </p>
+                <ul>
+                    <li>data types</li>
+                    <li>standard python libraries: os, random, re, datatime, json, sqlite3</li>
+                    <li>pytest, pylint</li>
+                    <li>Object-oriented programming</li>
+                    <li>context manager, decorators, generators, iterators</li> 
+                    <li>exceptions</li> 
+                    <li>list/dict/set comprehension</li>
+                </ul>
+            <p><b>SQL</b> – basis level required for Python and Django implementation</p>
+            <p><b>Django</b> – basic level</p>
+                <ul>
+                    <li>templates, models, views, URLs</li>
+                    <li>Class Based Views</li>
+                </ul>
+            <p><b>Git</b></p>
+            <p><b>Virtual Studio Code</b></p>
+            <p><b>HTML and CSS</b> – basic level</p>
+            <p><b>Linux</b> – Ubuntu</p>
+        </div>
+        
+        <div class="experience">
+            <h2 class='cv'>EXPERIENCE</h2>
+            <p><b>Material and Structure Laboratory</b></p>
+            <p>2013 - current</p>
+            <p>engineering and technical specialist</p>
+            <ul>
+                <li>creation offers for research and analyze the client's needs
+                performing fire and smoke tests in a laboratory with an implemented system according
+                to PN‑EN ISO / IEC 17025 accredited by Polish Accreditation Center</li>
+                <li>kept documentation related to accreditation: creating test procedures,
+                measurement sheets, reports, updating and introducing changes to existing test procedures
+                <li>implementation new test methods</li>
+                <li>working with foreign working groups for implementation test method standard</li>
+                <li>solving technical problems with test apparatus</li>
+            </ul>
+        </div>
+ 
+        <div class="education">
+            <h2 class='cv'>EDUCATION</h2>
+            <p><b>Master of Science Engineer in chemistry</b></p>
+            <p class="">Military University of Technology, Faculty of New Technology and Chemistry First and Second cycle</p>
+                <p>2007 – 2012</p>
+        </div>
+
+        <div class="nice_to_have">
+            <h2 class='cv'>NICE TO HAVE</h2>
+            <ul>
+                <li>English fluent in speaking and writing</li>
+                <li>Docs review</li>
+            </ul>
+        </div>
+
+        <div class="hobby">
+            <h2 class='cv'>HOBBY</h2>
+            <p class="">technology, programming, music, firearms, astronomy</p>
+        </div>
+  
 </div>
 
 {% endblock %}

@@ -8,7 +8,7 @@ app_name = 'jpportfolio'
 
 urlpatterns = [
     path('', views.about_me, name='about_me'),
-    path('cv/', views.CV.as_view(), name ='cv'),
+    path('cv/', TemplateView.as_view(template_name = 'my_cv.html'), name ='cv'),
     path('portfolio/', views.PortfolioView.as_view(), name='portfolio'), 
     path('contact/', views.my_contact, name='contact'), 
     path('success/', TemplateView.as_view(template_name = 'success.html'), name = 'success')
