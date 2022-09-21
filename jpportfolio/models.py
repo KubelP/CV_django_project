@@ -1,11 +1,12 @@
 from django.db import models
 
 class PortfolioCV(models.Model):
+    name = models.CharField(max_length=100, default='JP')
     body = models.TextField()
     data = models.DateTimeField(auto_now_add=True)
 
     def __str__(self) -> str:
-        return self.body
+        return self.name
 
 
 class Comments(models.Model):
