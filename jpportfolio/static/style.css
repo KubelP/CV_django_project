@@ -85,7 +85,6 @@ li {
 }
 
 .content {
-    margin:auto;
     background-color: rgb(219, 219, 219);
 }
 
@@ -310,7 +309,9 @@ footer {
         margin: auto;
         font-size: 15px;
     }
-
+    .content {
+        padding: 0 50px;
+    }
     .nav_a {
         flex-direction: row;
     }
