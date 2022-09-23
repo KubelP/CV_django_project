@@ -310,6 +310,17 @@ footer {
         margin: auto;
         font-size: 15px;
     }
+
+    .nav_a {
+        flex-direction: row;
+    }
+
+    .nav_a li {
+        list-style: none;
+        text-align: center;
+        width: 25%;
+    }
+
     .date_author {
         font-size: 12px;
     }

@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon_16x16.png' %}"/>
     <link rel="stylesheet" href="{% static 'style.css' %}"/>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'cookieconsent.css' %}" media="print" onload="this.media='all'">
     
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,7 +35,8 @@
         {% block content %}
         {% endblock %}
     </div>
-
+    <script defer src="{% static 'cookieconsent.js' %}"></script>
+    <script defer src="{% static 'cookieconsent-init.js' %}"></script>
 </body>
 <footer><p>Jakub Piergies 2022 powerdy by</p><p style="margin-top: 10px;"><a class='django_link' href='https://www.djangoproject.com/' target="blank"><img src="{% static 'images/logo-django.svg' %}"></a></p></footer>
 </html>
