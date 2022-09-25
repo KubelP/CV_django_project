@@ -46,3 +46,7 @@ class PortfolioView(ListView):
     template_name = 'my_portfolio.html'
     model = Portfolio
     context_object_name = 'projects'
+
+
+def page_not_found(request, exception):
+    return render(request, '404.html')

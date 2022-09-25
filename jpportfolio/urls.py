@@ -13,3 +13,5 @@ urlpatterns = [
     path('contact/', views.my_contact, name='contact'), 
     path('success/', TemplateView.as_view(template_name = 'success.html'), name = 'success')
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+
+handler404 = 'jpportfolio.views.page_not_found'
